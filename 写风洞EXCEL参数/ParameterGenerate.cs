@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        public void OneGenerateRecArea(decimal[] para)
+        public void OneGenerateRec(decimal[] para)
         {
             if (para.Length==6)       //应该是动态数组改为count
             {
@@ -39,23 +39,26 @@ namespace WindowsFormsApplication1
                 string cellPara = "Z(" + z1 + "," + z2 + ")A(" + x1 + "," + y1 + ")B(" + x2 + "," + y2 + ")" + precision;
                 
             }
+            if (para.Length==12)
+            {
+                decimal x0 = para[0];
+                decimal y0 = para[1];
+                decimal z0 = para[2];
+                decimal x1 = para[3];
+                decimal y1 = para[4];
+                decimal z1 = para[5];
+                decimal x2 = para[6];
+                decimal y2 = para[7];
+                decimal z2 = para[8];
+                decimal x3 = para[9];
+                decimal y3 = para[10];
+                decimal z3 = para[11];
+                string cellPara = "O(" + x0 + "," + y0 + "," + z0 + ")A(" + x1 + "," + y1 + "," + z1 + ")B(" + x2 + "," + y2 + "," + z2 + ")C(" + x3 + "," + y3 + "," + z3 + ")";
+
+            }
         }
 
 
-        //public void oneGenerateCuboid(decimal[] para)
-        //{
-        //    if (para.Length == 7)
-        //    {
-        //        decimal x0 = para[0];
-        //        decimal y0 = para[0];
-        //        decimal z0 = para[0];
-        //        decimal x1 = para[0];
-        //        decimal y1 = para[0];
-        //        decimal x2 = para[0];
-        //        decimal z1 = para[0];
-        //        //string cellPara = "Z(" + z1 + "," + z2 + ")A(" + x1 + "," + y1 + ")B(" + x2 + "," + y2 + ")" + precision;
 
-        //    }
-        //}
     }
 }
